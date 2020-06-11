@@ -4,6 +4,7 @@ const sass = require('gulp-sass')
 const jade = require('gulp-jade')
 const uglify = require('gulp-uglify')
 const concat = require('gulp-concat')
+const autoprefixer = require('gulp-autoprefixer');
 
 const tmp = function(){
 	return src("jade/*.jade")
@@ -13,7 +14,8 @@ const tmp = function(){
 
 const style = function(){
 	return src("app/scss/*.scss")
-        .pipe(sass())
+        .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(dest("app/css"))
         .pipe(browserSync.stream());
 }

@@ -1,0 +1,65 @@
+*, html, body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.content > div {
+  border: 1px dashed #353535;
+}
+
+.content > div h1.center {
+  text-align: center;
+  justify-content: middle;
+  padding: 10px;
+}
+
+.content > div p {
+  text-align: justify;
+  margin: 15px;
+}
+
+.content .col {
+  width: 100%;
+}
+
+.content .col-6 {
+  width: 50%;
+}
+
+/*phone*/
+@media (max-width: 320px) {
+  .my-div {
+    background-color: #cd2121;
+  }
+}
+
+/*tablet*/
+@media (min-width: 321px) and (max-width: 1024px) {
+  .my-div {
+    background-color: yellow;
+  }
+}
+
+/*desktop*/
+@media (min-width: 1025px) {
+  .my-div {
+    background-color: green;
+    padding: 10px;
+  }
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  font-size: 15px;
+}

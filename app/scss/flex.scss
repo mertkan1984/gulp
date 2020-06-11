@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;1,300&family=Oswald:wght@300&family=Quicksand:wght@500&display=swap');
+
+*,html,body{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	/*font-family: 'Muli', sans-serif;
+	font-family: 'Oswald', sans-serif;*/
+	font-family: 'Quicksand', sans-serif;
+	font-size:17px;
+}
+
+body{
+	background-color: #F9F9F9;
+}
+
+.row{
+	background-color: white;
+	width: 1180px;
+	margin:0 auto;
+	border:1px solid #D9D9D9;
+
+	.content{
+		display:flex;
+		flex-flow: row wrap;
+		
+		div{
+			width: 100%;
+		}
+
+		.div-50 {
+			width: 50%;
+		}
+
+		.box{
+			border-right:1px solid #635C5C;
+			text-align:center;
+			width: 25%;
+			padding:10px;
+			line-height: 5;
+			vertical-align: middle;
+		}
+
+		p{
+			text-align:justify;
+			padding:0 15px 0 15px;
+		}
+
+		.v-flex{
+			display: flex;
+			flex-flow: column nowrap;
+			width:25%;
+			text-align:center;
+
+			.v-item{
+				height: 50%;
+				min-width: 100%;
+				line-height: 3;
+				&:nth-child(1){
+					border-bottom:1px solid gray;
+				}
+			}
+		}
+	}
+}
+
+nav{
+	width: 100%;
+	padding:10px;
+	a.nava{
+		text-decoration: none;
+		color:#271E1E;
+		&:not(:last-child):after{
+			content: " | "
+		}
+	}
+}
+
+/*a{
+	background-color: #000;
+	border:1px solid #000;
+	text-decoration: none;
+	color:#fff;
+	padding:5px 15px 5px 15px;
+	font-size: 20px;
+	
+	&:hover{
+		border:2px solid #000;
+		background-color: #fff;
+		color:#000;
+	}
+	}*/
+
+	.border-line{
+		border-bottom:1px solid #635C5C;
+		padding-bottom:10px;
+		margin-bottom:10px;
+	}
+
+	.all-border{
+		border:1px solid #635C5C;
+	}
+
+	.margin-15{
+		margin:20px 30px 0 30px;
+	}
+
+	.padding-15{
+		padding:15px;
+	}
+
+	.text-left{
+		text-align: left;
+	}
+
+	.text-right{
+		text-align: right;
+	}
+
+	img{
+		float:left;
+		margin-right:10px;
+		margin-top:5px;
+	}
+
+	@mixin reset-list{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+
+	@mixin horizontal-list{
+		@include reset-list;
+		li{
+			display:inline-block;
+			margin:{
+				left:-2px;
+				right: 2em;
+			}
+		}
+	}
+
+	nav ul{
+		@include horizontal-list;
+	}
+	
+	@mixin command(){
+		@media only screen and (min-width: 500px){
+			@content;
+		}
+	}
+ 
+	@include command{
+		h1{
+			color:"red";
+		}
+	}
+
+

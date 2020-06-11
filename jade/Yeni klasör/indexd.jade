@@ -1,0 +1,20 @@
+doctype html
+html
+	include ./layouts/header.jade
+	body
+		.container
+			.row
+				.col-sm ddsds
+				.col-sm ddsds
+				.col-sm ddsds
+				.col-sm 
+					div(class="alert alert-warning alert-dismissible fade show", role="alert")
+						strong Holy guacamole!
+						button(type='button', class='close', data-dismiss='alert', aria-label='Close')
+							span(aria-hidden='true') &times;
+		script
+			| $('.alert').alert()
+		include ./layouts/footer.jade
+		
+
+		

@@ -1,0 +1,52 @@
+@import "new_media";
+
+div.content{
+	border:1px solid #959595;
+	width: 98%;
+	padding:12px 0;
+	text-align: center; 
+	margin:5px;
+}
+
+div.content-a{
+	border:1px solid #959595;
+	width: 100%;
+	margin: 5px; 
+	padding:12px 0;
+	
+}
+
+div.content-b{
+	border:1px solid #959595;
+	width:98%;
+	margin: 5px;
+	padding:12px 0;
+	text-align: center;
+}
+
+
+div{ 
+	h1{
+		color:#1E1E1E;
+		font-size:20px;
+		margin:0 15px;
+		padding-bottom: 5px;
+		border-bottom:1px solid #7D7A7A;
+	}
+
+	p{
+		color:#505050;
+		margin-top:5px;
+		text-align: justify;
+		padding:0 15px;
+	}
+}
+
+ul{
+	list-style: none;
+	margin:5px;
+}
+
+div.t{
+	transition: all 4s ease;
+}
